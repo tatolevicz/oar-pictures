@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="mainContent">
+        <h1>Vote nas suas 30 fotos favoritas</h1>
+        <form id="votingForm">
+            <div id="photosContainer"></div>
+        </form>
+    
+        <div id="imageModal" class="modal">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    
+    </div>
+    
+    <!-- Barra lateral à direita -->
+    <div id="sidebar">
+        <div id="counter" class="photo-counter">0/30</div>
+        <button id="submitButton" class="md-button">Baixar Votos</button>
+        <input type="file" id="fileInput" style="display: none;" accept=".txt">
+        <button id="loadButton" class="md-button md-button-load">Carregar Seleção</button>
+        <div id="selectedPhotosContainer"></div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

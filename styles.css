@@ -1,0 +1,125 @@
+#photosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.photo {
+    border: 3px solid #ddd;
+    padding: 8px;
+    max-width: 150px;
+    transition: border-color 0.3s;
+}
+
+.photo img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.photo.selected {
+    border-color: rgb(255, 34, 0);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    z-index: 1001; 
+
+}
+
+.photo-counter {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.md-button {
+    position: fixed;
+    top: 40px;  /* Ajuste conforme necessário para posicionar abaixo do contador */
+    right: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.md-button:hover {
+    background-color: #3700b3;
+}
+
+.md-button:active {
+    background-color: #270088;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.md-button-load {
+    top: 90px;  /* Posicionado abaixo do botão anterior */
+}
+
+/* ... (seus estilos anteriores) ... */
+
+#mainContent {
+    width: 75%;
+    float: left;
+}
+
+#sidebar {
+    width: 25%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #ddd;
+    /* height: 100vh; */
+    position: relative;
+    /* overflow-y: auto; */
+    overflow-y: visible;  /* Garante que a barra lateral não tenha rolagem */
+    height: auto;         /* Permite que a barra lateral cresça conforme o conteúdo */
+    max-height: 100vh;    /* Define a altura máxima para a altura da tela */
+}
+
+#selectedPhotosContainer img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+    display: block;       /* Garante que cada imagem seja exibida em uma nova linha */
+
+}
+
+.md-button, .md-button-load {
+    display: block;
+    margin-top: 10px;
+}
